@@ -5,48 +5,86 @@ interface NavItem {
   label: string;
   path?: string;
   sectionHeader?: boolean;
+  divider?: string; // unique id for dividers
 }
 
 const navTree: NavItem[] = [
+  // GETTING STARTED
+  { label: "GETTING STARTED", sectionHeader: true },
   { label: "Home", path: "/" },
-  { label: "About", sectionHeader: true },
+
+  { divider: "d-about", label: "" },
+
+  // ABOUT THE SACCO
+  { label: "ABOUT THE SACCO", sectionHeader: true },
   { label: "Company Profile", path: "/about/company-profile" },
   { label: "Vision & Mission", path: "/about/vision-mission" },
   { label: "Core Services", path: "/about/core-services" },
   { label: "Strategic Objectives", path: "/about/strategic-objectives" },
   { label: "Contact", path: "/about/contact" },
-  { label: "Project Overview", sectionHeader: true },
+
+  { divider: "d-project", label: "" },
+
+  // PROJECT OVERVIEW
+  { label: "PROJECT OVERVIEW", sectionHeader: true },
   { label: "Introduction", path: "/project/introduction" },
   { label: "Problem Statement", path: "/project/problem-statement" },
   { label: "Concept Note", path: "/project/concept-note" },
-  { label: "Methodology", sectionHeader: true },
+
+  { divider: "d-methodology", label: "" },
+
+  // METHODOLOGY
+  { label: "METHODOLOGY", sectionHeader: true },
   { label: "Literature Review", path: "/methodology/literature-review" },
   { label: "Feasibility Study", path: "/methodology/feasibility-study" },
   { label: "Needs Assessment", path: "/methodology/needs-assessment" },
   { label: "Stakeholder Analysis", path: "/methodology/stakeholder-analysis" },
   { label: "Data Collection", path: "/methodology/data-collection" },
-  { label: "Implementation", sectionHeader: true },
+
+  { divider: "d-implementation", label: "" },
+
+  // IMPLEMENTATION
+  { label: "IMPLEMENTATION", sectionHeader: true },
   { label: "Phases", path: "/implementation/phases" },
   { label: "Key Activities", path: "/implementation/key-activities" },
   { label: "Deliverables", path: "/implementation/deliverables" },
-  { label: "Schedule", path: "/implementation/schedule" },
-  { label: "Beneficiaries & Products", sectionHeader: true },
+  { label: "Implementation Schedule", path: "/implementation/schedule" },
+
+  { divider: "d-beneficiaries", label: "" },
+
+  // BENEFICIARIES & PRODUCTS
+  { label: "BENEFICIARIES & PRODUCTS", sectionHeader: true },
   { label: "Beneficiaries", path: "/beneficiaries" },
   { label: "Financial Products", path: "/products/financial-products" },
   { label: "Value Proposition", path: "/products/value-proposition" },
   { label: "Customer Segments", path: "/products/customer-segments" },
-  { label: "Channels", path: "/products/channels" },
-  { label: "Revenue Streams", path: "/products/revenue-streams" },
-  { label: "Key Resources", path: "/products/key-resources" },
-  { label: "Impact Metrics", path: "/products/impact-metrics" },
-  { label: "Results & Governance", sectionHeader: true },
-  { label: "Strategy & Results", path: "/strategy-results" },
+
+  { divider: "d-strategy", label: "" },
+
+  // STRATEGY & RISK
+  { label: "STRATEGY & RISK", sectionHeader: true },
+  { label: "Strategy & Expected Results", path: "/strategy-results" },
   { label: "Risk Management", path: "/risk-management" },
+
+  { divider: "d-hr", label: "" },
+
+  // HUMAN RESOURCES
+  { label: "HUMAN RESOURCES", sectionHeader: true },
   { label: "Staffing", path: "/hr/staffing" },
   { label: "Organogram", path: "/hr/organogram" },
-  { label: "Motivation Plan", path: "/hr/motivation-plan" },
+  { label: "Staff Motivation", path: "/hr/motivation-plan" },
+
+  { divider: "d-financials", label: "" },
+
+  // FINANCIALS
+  { label: "FINANCIALS", sectionHeader: true },
   { label: "Budget", path: "/budget" },
-  { label: "Sustainability", path: "/sustainability" },
+  { label: "Sustainability Strategy", path: "/sustainability" },
+
+  { divider: "d-references", label: "" },
+
+  // REFERENCES
+  { label: "REFERENCES", sectionHeader: true },
   { label: "References", path: "/references" },
 ];
 
@@ -102,7 +140,7 @@ export default function Sidebar({ onClose }: { onClose: () => void }) {
         </p>
       </div>
 
-      {/* Divider */}
+      {/* Divider under logo */}
       <div
         style={{
           height: "1px",
@@ -114,17 +152,34 @@ export default function Sidebar({ onClose }: { onClose: () => void }) {
       {/* Nav items */}
       <div style={{ padding: "0 12px 24px", flex: 1 }}>
         {navTree.map((item) => {
+          // Group divider line
+          if (item.divider) {
+            return (
+              <div
+                key={item.divider}
+                style={{
+                  height: "1px",
+                  background: "rgba(255,255,255,0.12)",
+                  margin: "8px 8px",
+                }}
+              />
+            );
+          }
+
+          // Section header
           if (item.sectionHeader) {
             return (
               <div
                 key={`section-${item.label}`}
                 style={{
-                  fontSize: "0.7rem",
+                  fontSize: "0.68rem",
                   textTransform: "uppercase",
-                  letterSpacing: "2px",
-                  color: "rgba(255,214,0,0.6)",
-                  padding: "12px 8px 4px",
-                  marginTop: "4px",
+                  letterSpacing: "1.8px",
+                  color: "rgba(255,214,0,0.85)",
+                  fontFamily: "'Sora', sans-serif",
+                  fontWeight: 700,
+                  padding: "8px 8px 4px",
+                  marginTop: "2px",
                   userSelect: "none",
                 }}
               >
@@ -147,16 +202,16 @@ export default function Sidebar({ onClose }: { onClose: () => void }) {
               onClick={onClose}
               style={({ isActive }) => ({
                 display: "block",
-                padding: "9px 12px",
+                padding: "8px 12px",
                 borderRadius: "6px",
-                fontSize: "0.9rem",
+                fontSize: "0.88rem",
                 fontFamily: "'Inter', sans-serif",
-                color: isActive ? "#1B5E20" : "white",
+                color: isActive ? "#1B5E20" : "rgba(255,255,255,0.9)",
                 background: isActive ? "#FFD600" : "transparent",
                 fontWeight: isActive ? 600 : 400,
                 transition: "all 0.2s ease",
                 textDecoration: "none",
-                marginBottom: "2px",
+                marginBottom: "1px",
               })}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
