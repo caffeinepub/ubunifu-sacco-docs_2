@@ -1,7 +1,17 @@
 import { AlertTriangle, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import type { Components } from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
+
+const mdComponents: Components = {
+  table: ({ children }) => (
+    <div className="md-table-scroll">
+      <table>{children}</table>
+    </div>
+  ),
+};
 
 export default function MarkdownPage({ mdFile }: { mdFile: string }) {
   const [content, setContent] = useState<string | null>(null);
@@ -61,7 +71,13 @@ export default function MarkdownPage({ mdFile }: { mdFile: string }) {
 
   return (
     <article className="md-content">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content ?? ""}</ReactMarkdown>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeHighlight]}
+        components={mdComponents}
+      >
+        {content ?? ""}
+      </ReactMarkdown>
     </article>
   );
 }
