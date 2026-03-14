@@ -1,19 +1,13 @@
-# Vision & Mission
+# 🎯 Vision & Mission
 
-## Vision
+---
 
-> *"To be the leading innovative SACCO empowering members to achieve financial freedom and sustainable prosperity."*
+## 👁️ Vision
 
-## Mission
+> To become the leading financial cooperative in Uganda that supports technology-driven enterprises, empowering creators and innovators to shape a better, inclusive digital economy.
 
-> *"To provide accessible, affordable, and innovative financial solutions that enhance the economic well-being of our members and communities."*
+---
 
-## Core Values
+## 🚀 Mission
 
-| Value | Description |
-|---|---|
-| Integrity | Upholding the highest ethical standards in all operations |
-| Innovation | Embracing technology and creative solutions |
-| Member Focus | Placing members at the centre of every decision |
-| Transparency | Open and accountable governance |
-| Inclusion | Ensuring no member is left behind |
+> To provide accessible, innovative, and inclusive financial services that support startups, creatives, and innovators in Uganda through savings, affordable credit, business development support, and strategic partnerships.

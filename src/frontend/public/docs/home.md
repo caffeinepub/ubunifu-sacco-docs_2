@@ -1,23 +1,18 @@
-# Welcome to UBUNIFU SACCO Ltd. Documentation
+# 🏠 UBUNIFU SACCO Ltd.
 
-UBUNIFU SACCO Ltd. is a member-owned financial cooperative dedicated to promoting financial inclusion, savings culture, and economic empowerment among its members in Kenya.
+> 💡 **Insight:** UBUNIFU SACCO is Uganda's first tech- and creative-focused financial cooperative, dedicated to empowering innovators, startups, and digital creatives.
 
-This documentation portal covers the organization's background, project methodology, implementation plans, financial products, and strategic direction.
+---
 
-## Quick Navigation
+## 📋 SACCO Information
 
-| Section | Description |
+| **Field** | **Details** |
 |---|---|
-| About | Company background, vision, services |
-| Project Overview | Introduction and problem statement |
-| Methodology | Research and planning approach |
-| Implementation | Phases, activities, and schedule |
-| Products | Financial products and business model |
-| Budget | Financial projections and allocations |
-
-## Key Highlights
-
-- **Founded**: 2018
-- **Members**: 2,500+ active members
-- **Focus Area**: Nairobi and surrounding counties
-- **Regulatory Body**: SASRA (Sacco Societies Regulatory Authority)
+| **Project Title** | Establishment and Operationalization of UBUNIFU SACCO to Support Technology Startups and Creative Enterprises in Uganda |
+| **Project Location** | Entire Uganda |
+| **Project Duration** | 5 years (January 2026 – December 2031) |
+| **Project Objective** | To establish a functional SACCO that enhances financial access, networking, and business development support for technology innovators and creatives in Uganda |
+| **Beneficiaries** | Tech startups, digital entrepreneurs, innovators, creatives (artists, designers, developers), and youth-led enterprises |
+| **Budget** | UGX 50,000,000,000 |
+| **Funding Sources** | Member contributions, private investors, government of Uganda, development partners, and innovation grant opportunities |
+| **Implementing Organization** | UBUNIFU SACCO LTD |

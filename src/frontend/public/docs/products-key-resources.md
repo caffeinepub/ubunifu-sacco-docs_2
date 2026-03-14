@@ -1,36 +1,11 @@
-# Key Resources
+# 🛠️ Key Resources
 
-## Human Resources
+> 💡 **Insight:** UBUNIFU SACCO's five key resources form the operational and strategic backbone of its member-driven innovation finance model.
 
-| Role | Number | Function |
-|---|---|---|
-| Chief Executive Officer | 1 | Overall leadership |
-| Chief Technology Officer | 1 | Digital platform |
-| Chief Finance Officer | 1 | Financial management |
-| Credit Manager | 1 | Loan portfolio |
-| Field Officers | 4 | Community outreach |
-| IT Support | 2 | Platform maintenance |
-| Finance Officers | 2 | Accounting |
-| Customer Service | 3 | Member support |
+---
 
-## Technological Resources
-- Cloud-based core banking system (Mambu)
-- Mobile application (Android & iOS)
-- USSD platform
-- Data analytics dashboard
-- CRM system
-
-## Financial Resources
-
-| Resource | Amount (KES) |
-|---|---|
-| Member Share Capital | 5,000,000 |
-| Grant Funding | 10,000,000 |
-| Development Finance | 5,000,000 |
-| **Total** | **20,000,000** |
-
-## Partnerships
-- M-Pesa (Safaricom) - payments infrastructure
-- Africa's Talking - USSD and SMS
-- Mambu - core banking
-- KCB Group - liquidity support
+1. Member capital and shares
+2. Innovation-driven staff and leadership
+3. ICT infrastructure (MIS, mobile apps)
+4. Strategic partnerships (accelerators, tech hubs, universities)
+5. Regulatory licenses from Uganda's cooperative authorities

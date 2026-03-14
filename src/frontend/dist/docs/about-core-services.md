@@ -1,27 +1,33 @@
-# Core Services
+# 🛠️ Core Services
 
-UBUNIFU SACCO provides a comprehensive suite of financial products and services tailored to the needs of its members.
+> 💡 **Insight:** UBUNIFU SACCO offers five integrated service pillars designed specifically for the needs of tech innovators and creative entrepreneurs.
 
-## Savings Products
+---
 
-| Product | Minimum Balance | Interest Rate |
-|---|---|---|
-| Regular Savings | KES 500/month | 8% p.a. |
-| Fixed Deposit | KES 10,000 | 12% p.a. |
-| Holiday Savings | KES 200/month | 7% p.a. |
-| Junior Savings | KES 100/month | 9% p.a. |
+## i. 💰 Savings and Investment Products
 
-## Loan Products
+Affordable savings plans, fixed deposit accounts, and investment opportunities designed to encourage a culture of financial growth among members.
 
-| Product | Maximum Amount | Interest Rate | Repayment |
-|---|---|---|---|
-| Development Loan | 3x Deposits | 12% p.a. | 48 months |
-| Emergency Loan | KES 50,000 | 8% p.a. | 12 months |
-| Business Loan | KES 500,000 | 14% p.a. | 60 months |
-| School Fees Loan | KES 100,000 | 10% p.a. | 12 months |
+---
 
-## Additional Services
-- Mobile banking via USSD and App
-- Insurance products (FOSA)
-- Financial literacy training
-- Investment advisory
+## ii. 🚀 Startup and Innovation Loans
+
+Tailored credit facilities to support early-stage tech startups, digital platforms, creative ventures, and social innovations.
+
+---
+
+## iii. 📈 Business Development Support
+
+Capacity-building programs, mentorship, and advisory services for members to help them scale their businesses and ideas.
+
+---
+
+## iv. 🌐 Networking and Collaboration Hubs
+
+Creating spaces for members to connect, co-create, and access market opportunities, accelerators, and innovation labs.
+
+---
+
+## v. 📚 Digital and Financial Literacy Training
+
+Equipping members with essential skills in digital tools, budgeting, business planning, and investment management.

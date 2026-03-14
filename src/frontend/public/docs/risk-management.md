@@ -1,52 +1,25 @@
-# Risk Management Plan
+# ⚠️ Risk Management Plan
 
-## Risk Matrix
+> ⚠️ **Note:** A proactive risk management approach is essential to safeguard UBUNIFU SACCO's financial integrity, member trust, and long-term sustainability.
 
-| **Risk** | **Category** | **Likelihood** | **Impact** | **Mitigation** | **Responsible Party** |
-|----------|--------------|----------------|------------|-----------------|----------------------|
-| Loan default by startup members | Financial | High | High | Strict credit assessments, financial literacy training, guarantor systems | Credit Committee |
-| Inadequate digital infrastructure or system failure | Technological | Medium | High | Partner with reliable IT providers, regular audits, backup/disaster recovery plan | IT Department |
-| Fraud or internal financial mismanagement | Governance | Medium | High | Internal audit systems, segregation of duties, board oversight | Board of Directors |
-| Low member recruitment or retention | Operational | Medium | Medium | Aggressive awareness campaigns, incentives for early members | Marketing Department |
-| Regulatory non-compliance | Legal/Compliance | Low | High | Regular compliance audits, continuous engagement with regulators | Legal & Compliance Officer |
-| Inability to raise initial capital | Financial/Funding | Medium | High | Attractive investment packages, showcase ROI, partner with angel investors | Fundraising Team |
-| Political interference or instability | External | Low | High | Maintain neutrality, diversify regional operations | Board of Directors |
-| Cybersecurity threats | Technological | Medium | High | Encryption, penetration tests, staff cyber hygiene training | IT Department |
-| Lack of business acumen among members | Capacity | High | Medium | Continuous capacity-building, mentorship and incubation support | Business Development Team |
-| Competition from other SACCOs | Strategic/Market | Medium | Medium | Define unique value proposition, focus on niche | Strategy Team |
-| Delays in government support | Funding/External | Medium | Medium | Diversify funding sources, establish MoUs with clear timelines | Board of Directors |
-| Resistance to digital service adoption | Technological/Change | Medium | Medium | User training on digital tools, provide hybrid services | IT Dept., Member Services |
-| Inadequate board oversight | Governance | Low | High | Board training, regular performance reviews | Governance Committee |
-| Macroeconomic shocks | External/Economic | Medium | High | Monitor market trends, adjust interest rates, build reserves | SACCO Treasury |
-| Negative public perception | Reputational | Low | High | Transparent communication, timely member engagement | Communications Dept. |
+---
 
-## Risk Governance Structure
+## 📊 Risk Matrix
 
-| **Body** | **Role** |
-|----------|----------|
-| **Board of Directors** | Overall risk oversight, approve risk appetite |
-| **Risk Management Committee** | Monitor risk profile, review mitigation plans |
-| **Internal Audit** | Independent assurance on risk controls |
-| **Management** | Implement risk policies, daily monitoring |
-| **Credit Committee** | Assess and manage credit risk |
-| **IT Security Team** | Manage technology and cybersecurity risks |
-
-## Risk Monitoring and Reporting
-
-| **Frequency** | **Reports** |
-|---------------|-------------|
-| **Daily** | System alerts, transaction monitoring |
-| **Weekly** | Cash flow, liquidity reports |
-| **Monthly** | Portfolio quality, member complaints |
-| **Quarterly** | Risk dashboard to Board |
-| **Annually** | Comprehensive risk review, external audit |
-
-## Risk Appetite Statement
-
-UBUNIFU SACCO maintains a **conservative to moderate risk appetite**, prioritizing:
-
-- Protection of member deposits
-- Sustainable growth over rapid expansion
-- Compliance with all regulations
-- Responsible lending that does not over-indebt members
-- Strong governance and transparency
+| **Risk Description** | **Category** | **Likelihood** | **Impact** | **Mitigation Measures** | **Responsible Party** |
+|---|---|---|---|---|---|
+| Loan default by startup members | Financial | High | High | Conduct strict credit assessments; Offer financial literacy training; Establish guarantor systems | Credit Committee, SACCO Management |
+| Inadequate digital infrastructure or system failure (MIS/FinTech tools) | Technological | Medium | High | Partner with reliable IT service providers; Regular system audits; Have a backup & disaster recovery plan | IT Department, MIS Vendor |
+| Fraud or internal financial mismanagement | Governance | Medium | High | Implement internal audit systems; Segregation of duties; Board oversight | Board of Directors, Internal Audit Unit |
+| Low member recruitment or retention | Operational | Medium | Medium | Aggressive awareness campaigns; Incentives for early members; Offer competitive services | Marketing Department, SACCO Management |
+| Regulatory non-compliance (UMRA, URSB, UCA) | Legal/Compliance | Low | High | Regular compliance audits; Continuous engagement with regulators; Legal support | Legal & Compliance Officer |
+| Inability to raise initial capital or attract investors | Financial/Funding | Medium | High | Develop attractive investment packages; Showcase ROI & impact; Partner with angel investors | Fundraising Team, Board of Directors |
+| Political interference or instability | External/Environmental | Low | High | Maintain neutrality; Engage all stakeholders inclusively; Diversify regional operations | Board of Directors |
+| Cybersecurity threats (hacking, data breach) | Technological | Medium | High | Adopt encryption & security protocols; Conduct penetration tests; Train staff on cyber hygiene | IT Department |
+| Lack of business acumen among members/startups | Capacity/Operational | High | Medium | Continuous capacity-building; Mentorship & incubation support | Training Unit, Innovation Partners |
+| Competition from other SACCOs or financial institutions | Strategic/Market | Medium | Medium | Define unique SACCO value proposition; Focus on niche (tech & creatives); Collaborate where possible | SACCO Strategy Team |
+| Delays in government support or funding disbursements | Funding/External | Medium | Medium | Diversify funding sources; Establish MoUs/agreements with clear timelines | Board of Directors, Government Liaison |
+| Resistance to innovation or digital service adoption by members | Technological/Change | Medium | Medium | User training on digital tools; Provide hybrid services (digital & physical) | IT Dept., Member Services |
+| Inadequate board oversight or poor governance | Governance | Low | High | Board training; Regular performance reviews; Independent evaluation committees | Board Chairperson, Supervisory Committee |
+| Macroeconomic shocks (inflation, interest rate fluctuations) | External/Economic | Medium | High | Monitor market trends; Adjust loan interest rates accordingly; Build reserves | SACCO Treasury, Board Finance Committee |
+| Negative public perception or loss of trust | Reputational | Low | High | Transparent communication; Timely member engagement; Address complaints promptly | Communications Dept., Board of Directors |
