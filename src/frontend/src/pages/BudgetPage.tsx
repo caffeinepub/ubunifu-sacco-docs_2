@@ -1,7 +1,5 @@
 import { AlertTriangle, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import type { Components } from "react-markdown";
 import {
   Cell,
   Legend,
@@ -10,8 +8,8 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
-import rehypeHighlight from "rehype-highlight";
-import remarkGfm from "remark-gfm";
+import PageHeader from "../components/PageHeader";
+import { markdownToHtml } from "../lib/markdownToHtml";
 
 const fixedCapitalData = [
   { name: "Financial Products Design", value: 810 },
@@ -59,14 +57,6 @@ const OP_COLORS = [
   "#c5f5d4",
   "#e2fded",
 ];
-
-const mdComponents: Components = {
-  table: ({ children }) => (
-    <div className="md-table-scroll">
-      <table>{children}</table>
-    </div>
-  ),
-};
 
 const PieTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
@@ -182,54 +172,64 @@ export default function BudgetPage() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
-        <PieCard
-          title="Fixed Capital Budget"
-          subtitle="Top 6 categories (UGX Millions)"
-          data={fixedCapitalData}
-          colors={FIXED_COLORS}
-        />
-        <PieCard
-          title="Operational Budget — Year 1"
-          subtitle="Breakdown by category (UGX Millions)"
-          data={operationalData}
-          colors={OP_COLORS}
-        />
-      </div>
-
-      {loading && (
-        <div
-          data-ocid="budget.loading_state"
-          className="flex items-center gap-3 py-10 text-muted-foreground"
-        >
-          <Loader2
-            size={18}
-            className="animate-spin"
-            style={{ color: "#2d8a4e" }}
+      <PageHeader
+        title="Budget"
+        subtitle="Fixed Capital & Operational Budget Projections"
+      />
+      <div
+        style={{ maxWidth: "860px", margin: "0 auto", padding: "48px 56px" }}
+        className="content-padding"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+          <PieCard
+            title="Fixed Capital Budget"
+            subtitle="Top 6 categories (UGX Millions)"
+            data={fixedCapitalData}
+            colors={FIXED_COLORS}
           />
-          <span className="text-sm">Loading content…</span>
+          <PieCard
+            title="Operational Budget — Year 1"
+            subtitle="Breakdown by category (UGX Millions)"
+            data={operationalData}
+            colors={OP_COLORS}
+          />
         </div>
-      )}
-      {error && (
-        <div
-          data-ocid="budget.error_state"
-          className="flex items-start gap-3 py-10 text-sm text-red-600"
-        >
-          <AlertTriangle size={18} className="flex-shrink-0 mt-0.5" />
-          <span>{error}</span>
-        </div>
-      )}
-      {content && (
-        <article className="md-content">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeHighlight]}
-            components={mdComponents}
+
+        {loading && (
+          <div
+            data-ocid="budget.loading_state"
+            className="flex items-center gap-3 py-10 text-muted-foreground"
           >
-            {content}
-          </ReactMarkdown>
-        </article>
-      )}
+            <Loader2
+              size={18}
+              className="animate-spin"
+              style={{ color: "#2d8a4e" }}
+            />
+            <span className="text-sm">Loading content…</span>
+          </div>
+        )}
+        {error && (
+          <div
+            data-ocid="budget.error_state"
+            className="flex items-start gap-3 py-10 text-sm text-red-600"
+          >
+            <AlertTriangle size={18} className="flex-shrink-0 mt-0.5" />
+            <span>{error}</span>
+          </div>
+        )}
+        {content && (
+          <article
+            className="md-content"
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: trusted markdown content
+            dangerouslySetInnerHTML={{ __html: markdownToHtml(content) }}
+          />
+        )}
+      </div>
+      <style>
+        {
+          "@media (max-width: 768px) { .content-padding { padding: 24px !important; } }"
+        }
+      </style>
     </div>
   );
 }

@@ -1,7 +1,5 @@
 import { AlertTriangle, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import type { Components } from "react-markdown";
 import {
   Bar,
   BarChart,
@@ -11,8 +9,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import rehypeHighlight from "rehype-highlight";
-import remarkGfm from "remark-gfm";
+import PageHeader from "../components/PageHeader";
+import { markdownToHtml } from "../lib/markdownToHtml";
 
 const activities = [
   { name: "SACCO Legal Formation", start: 0, duration: 4, color: "#2d8a4e" },
@@ -45,14 +43,6 @@ const yearLabels: Record<number, string> = {
   12: "Y4",
   16: "Y5",
   20: "End",
-};
-
-const mdComponents: Components = {
-  table: ({ children }) => (
-    <div className="md-table-scroll">
-      <table>{children}</table>
-    </div>
-  ),
 };
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -101,120 +91,130 @@ export default function SchedulePage() {
 
   return (
     <div>
-      <div className="bg-white border border-green-200 rounded-xl shadow-sm mb-8 overflow-hidden">
-        <div
-          className="px-6 py-4 border-b border-green-100"
-          style={{ background: "#2d8a4e" }}
-        >
-          <h2 className="text-white font-bold text-lg">
-            Implementation Schedule
-          </h2>
-          <p className="text-green-100 text-sm mt-0.5">
-            20 Quarterly Periods · 2026 – 2031
-          </p>
-        </div>
-        <div className="p-4">
-          <ResponsiveContainer width="100%" height={380}>
-            <BarChart
-              layout="vertical"
-              data={activities}
-              margin={{ top: 8, right: 24, left: 170, bottom: 8 }}
-              barSize={18}
-            >
-              <XAxis
-                type="number"
-                domain={[0, 20]}
-                ticks={yearTicks}
-                tickFormatter={(v) => yearLabels[v] ?? ""}
-                tick={{ fontSize: 12, fill: "#2d8a4e", fontWeight: 600 }}
-                tickLine={false}
-                axisLine={{ stroke: "#d1fae5" }}
-              />
-              <YAxis
-                type="category"
-                dataKey="name"
-                width={165}
-                tick={{ fontSize: 11.5, fill: "#1a3d2a" }}
-                tickLine={false}
-                axisLine={false}
-              />
-              <Tooltip
-                content={<CustomTooltip />}
-                cursor={{ fill: "rgba(45,138,78,0.06)" }}
-              />
-              <Bar
-                dataKey="start"
-                stackId="gantt"
-                fill="transparent"
-                radius={0}
-                isAnimationActive={false}
+      <PageHeader
+        title="Implementation Schedule"
+        subtitle="20 Quarterly Periods · January 2026 – December 2031"
+      />
+      <div
+        style={{ maxWidth: "860px", margin: "0 auto", padding: "48px 56px" }}
+        className="content-padding"
+      >
+        <div className="bg-white border border-green-200 rounded-xl shadow-sm mb-8 overflow-hidden">
+          <div
+            className="px-6 py-4 border-b border-green-100"
+            style={{ background: "#2d8a4e" }}
+          >
+            <h2 className="text-white font-bold text-lg">
+              Implementation Schedule
+            </h2>
+            <p className="text-green-100 text-sm mt-0.5">
+              20 Quarterly Periods · 2026 – 2031
+            </p>
+          </div>
+          <div className="p-4">
+            <ResponsiveContainer width="100%" height={380}>
+              <BarChart
+                layout="vertical"
+                data={activities}
+                margin={{ top: 8, right: 24, left: 170, bottom: 8 }}
+                barSize={18}
               >
-                {activities.map((a) => (
-                  <Cell key={`spacer-${a.name}`} fill="transparent" />
-                ))}
-              </Bar>
-              <Bar
-                dataKey="duration"
-                stackId="gantt"
-                radius={[4, 4, 4, 4]}
-                isAnimationActive={true}
-              >
-                {activities.map((a) => (
-                  <Cell key={`dur-${a.name}`} fill={a.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-          <div className="flex flex-wrap gap-3 mt-2 px-2">
-            {activities.map((a) => (
-              <span
-                key={a.name}
-                className="flex items-center gap-1.5 text-xs text-gray-600"
-              >
-                <span
-                  className="inline-block w-3 h-3 rounded-sm"
-                  style={{ background: a.color }}
+                <XAxis
+                  type="number"
+                  domain={[0, 20]}
+                  ticks={yearTicks}
+                  tickFormatter={(v) => yearLabels[v] ?? ""}
+                  tick={{ fontSize: 12, fill: "#2d8a4e", fontWeight: 600 }}
+                  tickLine={false}
+                  axisLine={{ stroke: "#d1fae5" }}
                 />
-                {a.name}
-              </span>
-            ))}
+                <YAxis
+                  type="category"
+                  dataKey="name"
+                  width={165}
+                  tick={{ fontSize: 11.5, fill: "#1a3d2a" }}
+                  tickLine={false}
+                  axisLine={false}
+                />
+                <Tooltip
+                  content={<CustomTooltip />}
+                  cursor={{ fill: "rgba(45,138,78,0.06)" }}
+                />
+                <Bar
+                  dataKey="start"
+                  stackId="gantt"
+                  fill="transparent"
+                  radius={0}
+                  isAnimationActive={false}
+                >
+                  {activities.map((a) => (
+                    <Cell key={`spacer-${a.name}`} fill="transparent" />
+                  ))}
+                </Bar>
+                <Bar
+                  dataKey="duration"
+                  stackId="gantt"
+                  radius={[4, 4, 4, 4]}
+                  isAnimationActive={true}
+                >
+                  {activities.map((a) => (
+                    <Cell key={`dur-${a.name}`} fill={a.color} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+            <div className="flex flex-wrap gap-3 mt-2 px-2">
+              {activities.map((a) => (
+                <span
+                  key={a.name}
+                  className="flex items-center gap-1.5 text-xs text-gray-600"
+                >
+                  <span
+                    className="inline-block w-3 h-3 rounded-sm"
+                    style={{ background: a.color }}
+                  />
+                  {a.name}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {loading && (
-        <div
-          data-ocid="schedule.loading_state"
-          className="flex items-center gap-3 py-10 text-muted-foreground"
-        >
-          <Loader2
-            size={18}
-            className="animate-spin"
-            style={{ color: "#2d8a4e" }}
-          />
-          <span className="text-sm">Loading content…</span>
-        </div>
-      )}
-      {error && (
-        <div
-          data-ocid="schedule.error_state"
-          className="flex items-start gap-3 py-10 text-sm text-red-600"
-        >
-          <AlertTriangle size={18} className="flex-shrink-0 mt-0.5" />
-          <span>{error}</span>
-        </div>
-      )}
-      {content && (
-        <article className="md-content">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeHighlight]}
-            components={mdComponents}
+        {loading && (
+          <div
+            data-ocid="schedule.loading_state"
+            className="flex items-center gap-3 py-10 text-muted-foreground"
           >
-            {content}
-          </ReactMarkdown>
-        </article>
-      )}
+            <Loader2
+              size={18}
+              className="animate-spin"
+              style={{ color: "#2d8a4e" }}
+            />
+            <span className="text-sm">Loading content…</span>
+          </div>
+        )}
+        {error && (
+          <div
+            data-ocid="schedule.error_state"
+            className="flex items-start gap-3 py-10 text-sm text-red-600"
+          >
+            <AlertTriangle size={18} className="flex-shrink-0 mt-0.5" />
+            <span>{error}</span>
+          </div>
+        )}
+        {content && (
+          <article
+            className="md-content"
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: trusted markdown content
+            dangerouslySetInnerHTML={{ __html: markdownToHtml(content) }}
+          />
+        )}
+      </div>
+      <style>
+        {
+          "@media (max-width: 768px) { .content-padding { padding: 24px !important; } }"
+        }
+      </style>
     </div>
   );
 }

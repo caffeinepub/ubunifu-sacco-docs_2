@@ -17,7 +17,6 @@
     "@types/node": "^20.9.0",
     "@types/react": "~19.1.0",
     "@types/react-dom": "~19.1.0",
-    "@types/react-router-dom": "^5.3.3",
     "@types/three": "0.176.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
@@ -91,10 +90,6 @@
     "react-quill-new": "3.4.6",
     "three": "^0.176.0",
     "zustand": "~5.0.5",
-    "motion": "^12.34.3",
-    "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.13.1",
-    "rehype-highlight": "^7.0.2",
-    "remark-gfm": "^4.0.1"
+    "motion": "^12.34.3"
   }
 }

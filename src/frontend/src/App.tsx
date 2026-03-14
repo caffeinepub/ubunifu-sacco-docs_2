@@ -1,13 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import MarkdownPage from "./components/MarkdownPage";
+import { Router, Routes } from "./lib/router";
 import BudgetPage from "./pages/BudgetPage";
+import HomePage from "./pages/HomePage";
 import OrganogramPage from "./pages/OrganogramPage";
 import SchedulePage from "./pages/SchedulePage";
 import StrategyResultsPage from "./pages/StrategyResultsPage";
 
 const mdRoutes: Array<{ path: string; mdFile: string }> = [
-  { path: "/", mdFile: "home.md" },
   { path: "/about/company-profile", mdFile: "about-company-profile.md" },
   { path: "/about/vision-mission", mdFile: "about-vision-mission.md" },
   { path: "/about/core-services", mdFile: "about-core-services.md" },
@@ -77,22 +77,22 @@ const mdRoutes: Array<{ path: string; mdFile: string }> = [
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Layout>
-        <Routes>
-          {mdRoutes.map(({ path, mdFile }) => (
-            <Route
-              key={path}
-              path={path}
-              element={<MarkdownPage mdFile={mdFile} />}
-            />
-          ))}
-          <Route path="/implementation/schedule" element={<SchedulePage />} />
-          <Route path="/strategy-results" element={<StrategyResultsPage />} />
-          <Route path="/budget" element={<BudgetPage />} />
-          <Route path="/hr/organogram" element={<OrganogramPage />} />
-        </Routes>
+        <Routes
+          routes={[
+            { path: "/", element: <HomePage />, exact: true },
+            ...mdRoutes.map(({ path, mdFile }) => ({
+              path,
+              element: <MarkdownPage mdFile={mdFile} />,
+            })),
+            { path: "/implementation/schedule", element: <SchedulePage /> },
+            { path: "/strategy-results", element: <StrategyResultsPage /> },
+            { path: "/budget", element: <BudgetPage /> },
+            { path: "/hr/organogram", element: <OrganogramPage /> },
+          ]}
+        />
       </Layout>
-    </BrowserRouter>
+    </Router>
   );
 }

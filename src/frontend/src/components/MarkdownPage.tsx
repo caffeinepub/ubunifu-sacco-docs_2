@@ -1,17 +1,7 @@
 import { AlertTriangle, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import type { Components } from "react-markdown";
-import rehypeHighlight from "rehype-highlight";
-import remarkGfm from "remark-gfm";
-
-const mdComponents: Components = {
-  table: ({ children }) => (
-    <div className="md-table-scroll">
-      <table>{children}</table>
-    </div>
-  ),
-};
+import { markdownToHtml } from "../lib/markdownToHtml";
+import PageHeader from "./PageHeader";
 
 export default function MarkdownPage({ mdFile }: { mdFile: string }) {
   const [content, setContent] = useState<string | null>(null);
@@ -37,47 +27,65 @@ export default function MarkdownPage({ mdFile }: { mdFile: string }) {
       });
   }, [mdFile]);
 
-  if (loading) {
-    return (
-      <div
-        data-ocid="content.loading_state"
-        className="flex items-center gap-3 py-16 text-muted-foreground"
-      >
-        <Loader2
-          size={20}
-          className="animate-spin"
-          style={{ color: "oklch(0.52 0.155 150)" }}
-        />
-        <span className="text-sm">Loading content…</span>
-      </div>
-    );
-  }
+  const title = content
+    ? (content.match(/^#\s+(.+)$/m)?.[1] ?? "Documentation")
+    : loading
+      ? "Loading…"
+      : "Documentation";
 
-  if (error) {
-    return (
-      <div
-        data-ocid="content.error_state"
-        className="flex items-start gap-3 py-16 text-sm"
-        style={{ color: "oklch(0.5 0.18 25)" }}
-      >
-        <AlertTriangle size={20} className="flex-shrink-0 mt-0.5" />
-        <div>
-          <p className="font-semibold">Could not load content</p>
-          <p className="text-muted-foreground mt-1">{error}</p>
-        </div>
-      </div>
-    );
-  }
+  const htmlContent = content ? markdownToHtml(content) : "";
 
   return (
-    <article className="md-content">
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight]}
-        components={mdComponents}
+    <div>
+      <PageHeader title={title} subtitle="UBUNIFU SACCO Ltd. Documentation" />
+
+      <div
+        style={{ maxWidth: "860px", margin: "0 auto", padding: "48px 56px" }}
+        className="content-padding"
       >
-        {content ?? ""}
-      </ReactMarkdown>
-    </article>
+        {loading && (
+          <div
+            data-ocid="content.loading_state"
+            className="flex items-center gap-3 py-16"
+            style={{ color: "#2E7D32" }}
+          >
+            <Loader2 size={20} className="animate-spin" />
+            <span style={{ fontSize: "0.9rem" }}>Loading content…</span>
+          </div>
+        )}
+
+        {error && (
+          <div
+            data-ocid="content.error_state"
+            className="flex items-start gap-3 py-16"
+            style={{ color: "#c62828" }}
+          >
+            <AlertTriangle size={20} className="flex-shrink-0 mt-0.5" />
+            <div>
+              <p style={{ fontWeight: 600, margin: 0 }}>
+                Could not load content
+              </p>
+              <p style={{ opacity: 0.7, marginTop: "4px", fontSize: "0.9rem" }}>
+                {error}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {content && (
+          <article
+            className="md-content"
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: trusted markdown content
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+          />
+        )}
+      </div>
+
+      <style>
+        {
+          "@media (max-width: 768px) { .content-padding { padding: 24px !important; } }"
+        }
+      </style>
+    </div>
   );
 }
