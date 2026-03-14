@@ -9,6 +9,7 @@ import {
   Tooltip,
 } from "recharts";
 import PageHeader from "../components/PageHeader";
+import PageNav from "../components/PageNav";
 import { markdownToHtml } from "../lib/markdownToHtml";
 
 const fixedCapitalData = [
@@ -224,6 +225,7 @@ export default function BudgetPage() {
             dangerouslySetInnerHTML={{ __html: markdownToHtml(content) }}
           />
         )}
+        <PageNav />
       </div>
       <style>
         {

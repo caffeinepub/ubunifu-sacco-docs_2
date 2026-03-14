@@ -12,6 +12,7 @@ import {
   YAxis,
 } from "recharts";
 import PageHeader from "../components/PageHeader";
+import PageNav from "../components/PageNav";
 import { markdownToHtml } from "../lib/markdownToHtml";
 
 const year5Targets = [
@@ -165,6 +166,7 @@ export default function StrategyResultsPage() {
             dangerouslySetInnerHTML={{ __html: markdownToHtml(content) }}
           />
         )}
+        <PageNav />
       </div>
       <style>
         {

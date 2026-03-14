@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
+import PageNav from "../components/PageNav";
 import { markdownToHtml } from "../lib/markdownToHtml";
 
 const departments = [
@@ -471,6 +472,7 @@ export default function OrganogramPage() {
             dangerouslySetInnerHTML={{ __html: markdownToHtml(content) }}
           />
         )}
+        <PageNav />
       </div>
       <style>
         {

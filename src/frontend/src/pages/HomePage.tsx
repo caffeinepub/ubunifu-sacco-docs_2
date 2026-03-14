@@ -1,6 +1,76 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import PageNav from "../components/PageNav";
 import { markdownToHtml } from "../lib/markdownToHtml";
 import { Link } from "../lib/router";
+
+const heroStats = [
+  { target: 25000, suffix: "+", label: "Members", prefix: "" },
+  { target: 50, suffix: "B", label: "Total Budget (UGX)", prefix: "" },
+  { target: 3000, suffix: "+", label: "Startups Funded", prefix: "" },
+  { target: 10000, suffix: "+", label: "Jobs Created", prefix: "" },
+  { target: 5, suffix: "", label: "Years Duration", prefix: "" },
+];
+
+function useCountUp(target: number, duration = 1800, start = false) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!start) return;
+    let startTime: number | null = null;
+    const step = (ts: number) => {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
+      // ease-out cubic
+      const eased = 1 - (1 - progress) ** 3;
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [target, duration, start]);
+  return count;
+}
+
+function StatCounter({
+  stat,
+  started,
+}: { stat: (typeof heroStats)[0]; started: boolean }) {
+  const value = useCountUp(stat.target, 1600, started);
+  const display =
+    stat.target >= 1000 ? value.toLocaleString() : value.toString();
+  return (
+    <div
+      style={{
+        textAlign: "center",
+        flex: "1 1 0",
+        minWidth: "100px",
+        padding: "0 8px",
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "'Sora', sans-serif",
+          fontWeight: 800,
+          color: "#FFD600",
+          lineHeight: 1,
+          marginBottom: "6px",
+        }}
+        className="stat-number"
+      >
+        {display}
+        {stat.suffix}
+      </div>
+      <div
+        style={{
+          fontFamily: "'Inter', sans-serif",
+          color: "rgba(255,255,255,0.8)",
+          fontWeight: 500,
+        }}
+        className="stat-label"
+      >
+        {stat.label}
+      </div>
+    </div>
+  );
+}
 
 const quickFacts = [
   { icon: "🏢", value: "2025", label: "Year Founded" },
@@ -13,6 +83,8 @@ const quickFacts = [
 
 export default function HomePage() {
   const [content, setContent] = useState<string | null>(null);
+  const [statsStarted, setStatsStarted] = useState(false);
+  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetch("/docs/home.md")
@@ -21,15 +93,31 @@ export default function HomePage() {
       .catch(() => null);
   }, []);
 
+  // Start count-up when hero is visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatsStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 },
+    );
+    if (heroRef.current) observer.observe(heroRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   const htmlContent = content ? markdownToHtml(content) : "";
 
   return (
     <div>
       {/* Hero Section */}
       <div
+        ref={heroRef}
         style={{
           background: "linear-gradient(135deg, #1B5E20 0%, #388E3C 100%)",
-          padding: "80px 56px",
+          padding: "72px 56px 56px",
           position: "relative",
           overflow: "hidden",
         }}
@@ -120,6 +208,24 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+
+        {/* Animated Stats Row */}
+        <div
+          style={{
+            position: "relative",
+            marginTop: "52px",
+            borderTop: "1px solid rgba(255,255,255,0.15)",
+            paddingTop: "36px",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "24px 0",
+          }}
+          className="stats-row"
+        >
+          {heroStats.map((stat) => (
+            <StatCounter key={stat.label} stat={stat} started={statsStarted} />
+          ))}
+        </div>
       </div>
 
       {/* Quick Facts */}
@@ -203,12 +309,19 @@ export default function HomePage() {
         </div>
       )}
 
+      <PageNav />
+
       <style>{`
         .hero-title { font-size: 3rem; }
+        .stat-number { font-size: 2.2rem; }
+        .stat-label { font-size: 0.82rem; }
         @media (max-width: 768px) {
-          .hero-section { padding: 48px 24px !important; }
+          .hero-section { padding: 48px 24px 40px !important; }
           .hero-title { font-size: 2rem !important; }
           .hero-subtitle { font-size: 1rem !important; }
+          .stats-row { gap: 20px 0 !important; }
+          .stat-number { font-size: 1.6rem !important; }
+          .stat-label { font-size: 0.75rem !important; }
           .facts-section { padding: 32px 24px !important; }
           .facts-grid { grid-template-columns: 1fr !important; }
           .content-padding { padding: 24px !important; }

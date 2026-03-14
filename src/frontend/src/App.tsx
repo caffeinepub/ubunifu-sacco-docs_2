@@ -1,9 +1,11 @@
 import Layout from "./components/Layout";
 import MarkdownPage from "./components/MarkdownPage";
 import { Router, Routes } from "./lib/router";
+import BeneficiariesPage from "./pages/BeneficiariesPage";
 import BudgetPage from "./pages/BudgetPage";
 import HomePage from "./pages/HomePage";
 import OrganogramPage from "./pages/OrganogramPage";
+import RiskManagementPage from "./pages/RiskManagementPage";
 import SchedulePage from "./pages/SchedulePage";
 import StrategyResultsPage from "./pages/StrategyResultsPage";
 
@@ -51,7 +53,6 @@ const mdRoutes: Array<{ path: string; mdFile: string }> = [
     path: "/implementation/deliverables",
     mdFile: "implementation-deliverables.md",
   },
-  { path: "/beneficiaries", mdFile: "beneficiaries.md" },
   {
     path: "/products/financial-products",
     mdFile: "products-financial-products.md",
@@ -68,7 +69,6 @@ const mdRoutes: Array<{ path: string; mdFile: string }> = [
   { path: "/products/revenue-streams", mdFile: "products-revenue-streams.md" },
   { path: "/products/key-resources", mdFile: "products-key-resources.md" },
   { path: "/products/impact-metrics", mdFile: "products-impact-metrics.md" },
-  { path: "/risk-management", mdFile: "risk-management.md" },
   { path: "/hr/staffing", mdFile: "hr-staffing.md" },
   { path: "/hr/motivation-plan", mdFile: "hr-motivation-plan.md" },
   { path: "/sustainability", mdFile: "sustainability.md" },
@@ -90,6 +90,8 @@ export default function App() {
             { path: "/strategy-results", element: <StrategyResultsPage /> },
             { path: "/budget", element: <BudgetPage /> },
             { path: "/hr/organogram", element: <OrganogramPage /> },
+            { path: "/beneficiaries", element: <BeneficiariesPage /> },
+            { path: "/risk-management", element: <RiskManagementPage /> },
           ]}
         />
       </Layout>

@@ -2,6 +2,7 @@ import { AlertTriangle, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { markdownToHtml } from "../lib/markdownToHtml";
 import PageHeader from "./PageHeader";
+import PageNav from "./PageNav";
 
 export default function MarkdownPage({ mdFile }: { mdFile: string }) {
   const [content, setContent] = useState<string | null>(null);
@@ -30,7 +31,7 @@ export default function MarkdownPage({ mdFile }: { mdFile: string }) {
   const title = content
     ? (content.match(/^#\s+(.+)$/m)?.[1] ?? "Documentation")
     : loading
-      ? "Loading…"
+      ? "Loading\u2026"
       : "Documentation";
 
   const htmlContent = content ? markdownToHtml(content) : "";
@@ -50,7 +51,7 @@ export default function MarkdownPage({ mdFile }: { mdFile: string }) {
             style={{ color: "#2E7D32" }}
           >
             <Loader2 size={20} className="animate-spin" />
-            <span style={{ fontSize: "0.9rem" }}>Loading content…</span>
+            <span style={{ fontSize: "0.9rem" }}>Loading content\u2026</span>
           </div>
         )}
 
@@ -79,6 +80,8 @@ export default function MarkdownPage({ mdFile }: { mdFile: string }) {
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         )}
+
+        <PageNav />
       </div>
 
       <style>
