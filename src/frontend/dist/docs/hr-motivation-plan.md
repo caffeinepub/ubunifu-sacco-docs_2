@@ -1,29 +1,61 @@
-# Staff Motivation Plan
+# Staff Motivation and Retention Plan
 
-## Compensation Philosophy
+## 1. Competitive and Performance-Based Remuneration
 
-UBUNIFU SACCO aims to offer compensation at the 60th percentile of the SACCO sector to attract and retain talent.
+- **Transparent salary scale** aligned with market benchmarks for financial institutions and tech-oriented organizations
+- **Performance-based incentive system** — bonuses for staff who exceed targets in savings mobilization, loan recovery, or digital access expansion
+- **Annual salary reviews** based on performance and inflation
 
-## Salary Bands
+## 2. Professional Development and Capacity Building
 
-| Grade | Role | Monthly Salary (KES) |
-|---|---|---|
-| G1 | CEO | 180,000 - 220,000 |
-| G2 | CFO, CTO, Credit Manager | 120,000 - 160,000 |
-| G3 | Department Heads | 80,000 - 110,000 |
-| G4 | Officers | 50,000 - 75,000 |
-| G5 | Support Staff | 30,000 - 48,000 |
+| **Training Type** | **Frequency** |
+|-------------------|---------------|
+| Workshops on financial technology tools and digital lending | Quarterly |
+| Exposure visits to other successful innovation-based SACCOs | Annually |
+| Certification in microfinance, digital banking, cooperative governance | As available |
+| In-house seminars on emerging trends | Monthly |
 
-## Non-Monetary Benefits
-- Medical insurance (staff + 2 dependants)
-- Group life insurance
-- Annual performance bonuses (up to 15% of salary)
-- Professional development budget (KES 30,000/yr per staff)
-- Flexible working arrangements
-- SACCO membership with preferential rates
+## 3. Innovation-Driven Culture
 
-## Performance Management
-- Quarterly performance reviews
-- Annual 360-degree appraisals
-- KPI-linked promotions
-- Staff recognition programme (Employee of the Quarter)
+- **Flexible working approaches** — remote work options, flexible hours
+- **Ideation platforms** — employees can pitch new solutions
+- **Recognition for ideas** — staff whose ideas are implemented receive recognition or monetary rewards
+- **Hackathons and innovation challenges** for staff
+
+## 4. Clear Career Growth Pathways
+
+- **Clear internal promotion framework** — junior roles to managerial positions
+- **Merit-based advancement** — promotions based on performance and skill development
+- **Succession planning** — preparing staff for future leadership roles
+- **Career counseling** — regular discussions about career paths
+
+## 5. Supportive Work Environment and Welfare Packages
+
+| **Benefit** | **Description** |
+|-------------|------------------|
+| Health insurance | Comprehensive medical coverage for staff and dependents |
+| Wellness programs | Gym memberships, wellness check-ups |
+| Paid leave | Annual leave, sick leave, family leave |
+| Family support policies | Maternity/paternity leave, childcare support |
+| Team-building retreats | Annual off-site events |
+| Mental health support | Counseling services, employee assistance program |
+
+## 6. Recognition and Appreciation Culture
+
+Annual staff awards program celebrating:
+
+- **Innovation Award** — for creative problem-solving
+- **Leadership Award** — for outstanding management
+- **Customer Service Excellence Award**
+- **Team of the Year Award**
+- **Long Service Award**
+
+## 7. Staff Feedback and Engagement
+
+| **Mechanism** | **Purpose** |
+|---------------|-------------|
+| Monthly staff meetings | Share updates, celebrate wins |
+| Anonymous suggestion box | Gather honest feedback |
+| Annual engagement survey | Measure satisfaction |
+| Exit interviews | Learn from departing staff |
+| Staff representatives on committees | Ensure voice in decision-making |

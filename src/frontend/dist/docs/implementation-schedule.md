@@ -1,25 +1,20 @@
 # Implementation Schedule
+## January 2026 – December 2031
 
-## Gantt Chart Summary
+The project spans 5 years, divided into 20 quarterly periods.
 
-| Activity | Q1 2025 | Q2 2025 | Q3 2025 | Q4 2025 | 2026 | 2027 |
-|---|---|---|---|---|---|---|
-| Team Setup | Yes | Yes | | | | |
-| Platform Dev | Yes | Yes | | | | |
-| Agent Network | | Yes | | | | |
-| Pilot Launch | | | Yes | | | |
-| Member Onboarding | | | Yes | Yes | Yes | Yes |
-| Loan Disbursement | | | Yes | Yes | Yes | Yes |
-| Fin. Literacy | | | Yes | Yes | Yes | Yes |
-| Scale-Up | | | | | Yes | Yes |
-| Evaluation | | | | Yes | | Yes |
+| **Activity** | **Year 1** | **Year 2** | **Year 3** | **Year 4** | **Year 5** |
+|--------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| SACCO Legal Formation & Compliance | ████ | | | | |
+| Digital Platform Development | ████ | ████ | | | |
+| Member Recruitment & Onboarding | | ████ | ████ | ████ | ████ |
+| Financial Products Design | ████ | | | | |
+| Capital Mobilization & Fundraising | ████ | ████ | ████ | ████ | ████ |
+| Mentorship Programs | | ████ | ████ | ████ | ████ |
+| Networking & Innovation Events | | ████ | ████ | ████ | ████ |
+| Financial Literacy Training | | ████ | ████ | ████ | ████ |
+| Monitoring & Evaluation | ████ | ████ | ████ | ████ | ████ |
+| Policy Advocacy | ██ | ████ | ████ | ████ | ████ |
 
-## Key Milestones
-
-| Milestone | Target Date |
-|---|---|
-| Platform Go-Live | June 30, 2025 |
-| First 100 Members | August 31, 2025 |
-| First 1,000 Members | March 31, 2026 |
-| Break-Even | June 30, 2026 |
-| 5,000 Members | December 31, 2027 |
+**Legend:** Each block represents intensive activity during that year.  
+Ongoing activities continue throughout the project duration.

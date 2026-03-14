@@ -1,33 +1,24 @@
 # UBUNIFU SACCO Docs
 
 ## Current State
-New project with no existing frontend implementation.
+The app uses `MarkdownPage` for all routes, fetching `.md` files from `/public/docs/`. Some pages need custom components with Recharts charts and interactive visuals.
 
 ## Requested Changes (Diff)
 
 ### Add
-- Full documentation website with sidebar navigation layout
-- React Router for client-side routing
-- react-markdown + remark-gfm for Markdown rendering
-- Collapsible sidebar with nested parent/child navigation sections
-- Top header bar with UBUNIFU SACCO Ltd. branding
-- Markdown content files for every section (placeholder content)
-- Active link highlighting in sidebar
-- Responsive layout
+- Custom page component: `SchedulePage` — Gantt-style chart (Recharts BarChart horizontal) + markdown content
+- Custom page component: `StrategyResultsPage` — BarChart of Year 5 targets + markdown content
+- Custom page component: `BudgetPage` — two PieCharts (Fixed Capital top-6 and Operational Year 1) + markdown content
+- Custom page component: `OrganogramPage` — SVG/inline interactive org chart + markdown content
+- All 10 markdown files with user-provided content
 
 ### Modify
-- N/A (new project)
+- `App.tsx`: Replace MarkdownPage for `/implementation/schedule`, `/strategy-results`, `/budget`, `/hr/organogram` routes with custom page components
 
 ### Remove
-- N/A
+- Nothing removed
 
 ## Implementation Plan
-1. Install react-router-dom, react-markdown, remark-gfm dependencies
-2. Create Markdown content files for all 30+ sections
-3. Build sidebar navigation component with collapsible groups
-4. Build top header component
-5. Build main layout with sidebar + content area
-6. Build MarkdownPage component that loads and renders .md files
-7. Wire up React Router routes for every page
-8. Apply green (#16a34a) and white color scheme via Tailwind
-9. Add responsive behavior (mobile-friendly sidebar toggle)
+1. Write all 10 markdown files to `src/frontend/public/docs/`
+2. Create 4 custom page components in `src/frontend/src/pages/`
+3. Update `App.tsx` to import and use custom components for 4 routes

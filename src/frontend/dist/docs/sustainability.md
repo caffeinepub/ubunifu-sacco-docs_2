@@ -1,34 +1,78 @@
-# Sustainability Plan
+# Sustainability Strategy
 
-## Financial Sustainability
+## i. Environmental Sustainability
 
-UBUNIFU SACCO aims to achieve **full operational self-sufficiency by Month 18** of the project. The sustainability strategy is built on three pillars:
+| **Initiative** | **Description** |
+|----------------|------------------|
+| **Cloud-based systems** | Reduce paper usage and physical storage |
+| **Virtual platforms** | Encourage virtual meetings to reduce travel emissions |
+| **Green-tech partnerships** | Promote startups with sustainable solutions |
+| **Energy-efficient equipment** | Low-power devices and renewable energy where possible |
 
-### Pillar 1: Revenue Diversification
-Reducing dependence on grant funding by growing member-generated revenue (loans, fees, insurance).
+## ii. Governance and Institutional Management
 
-### Pillar 2: Cost Efficiency
-Leveraging technology to reduce per-member service costs year-on-year.
+| **Element** | **Description** |
+|-------------|------------------|
+| **Board training** | Continuous education on cooperative principles and digital finance |
+| **Internal audits** | Regular independent checks |
+| **External audits** | Annual third-party financial reviews |
+| **Conflict of interest policies** | Clear guidelines |
+| **Democratic decision-making** | Member participation in AGMs |
 
-### Pillar 3: Membership Growth
-Growing the membership base to spread fixed costs and increase loan portfolio.
+## iii. Continuity After Donor and Grant Withdrawal
 
-## Sustainability Projections
+| **Strategy** | **Description** |
+|--------------|------------------|
+| **Competitive financial products** | Prototype funding, revenue-based loans generate interest income |
+| **Member equity contributions** | Core capital from members |
+| **Profit reinvestment** | Plow back surplus into operations |
+| **Internal capital mobilization** | Member savings as loanable funds |
+| **Digital efficiency** | Reduce costs and improve member retention |
 
-| Metric | Year 1 | Year 2 | Year 3 |
-|---|---|---|---|
-| Operational Self-Sufficiency (OSS) | 68% | 120% | 162% |
-| Cost per Member (KES) | 2,900 | 1,400 | 900 |
-| Revenue from Members (%) | 34% | 78% | 100% |
-| Grant Dependency | 66% | 22% | 0% |
+## iv. Maintenance of Digital and Physical Infrastructure
 
-## Institutional Sustainability
-- SASRA compliance maintained at all times
-- Good governance practices enshrined in by-laws
-- Succession planning for key roles
-- Technology platform owned by SACCO (no vendor lock-in)
+| **Action** | **Description** |
+|------------|------------------|
+| **Annual budget allocation** | 5–10% of operating budget for upkeep and upgrades |
+| **In-house technical staff** | Trained to manage and troubleshoot |
+| **Helpdesk support** | Serve members and troubleshoot issues |
+| **Strategic locations** | Branches co-located with tech hubs and universities |
+| **Co-financing partnerships** | Share costs with incubators and local governments |
 
-## Environmental Sustainability
-- Paperless operations (digital-first)
-- Green office policy
-- Remote work options to reduce carbon footprint
+## v. Technical and Digital Sustainability
+
+| **Initiative** | **Description** |
+|----------------|------------------|
+| **In-house ICT team** | Developed and trained continuously |
+| **University partnerships** | Internships, talent pipelines |
+| **Digital literacy for members** | Training on financial management systems |
+| **Regular webinars and resources** | Keep community informed |
+
+## vi. Community Ownership and Participation
+
+| **Action** | **Description** |
+|------------|------------------|
+| **Voting rights** | Members elect board and decide key issues |
+| **Co-design of products** | Involve members in development |
+| **Representation** | Women, youth, rural members on committees |
+| **Feedback mechanisms** | Surveys, suggestion platforms, town-hall meetings |
+| **Rewards system** | Recognize high-performing, compliant members |
+
+## vii. Strategic Partnerships and Ecosystem Integration
+
+| **Partner Type** | **Role** |
+|------------------|----------|
+| **Government** (Ministry of ICT, Uganda Investment Authority) | Policy support, funding |
+| **Private investors** | Growth capital, mentorship |
+| **Development agencies** | Technical assistance, grants |
+| **Regional innovation hubs** | Member referrals, co-working |
+| **Academic institutions** | Research, incubation, talent |
+
+## viii. Monitoring, Evaluation, and Adaptive Learning
+
+| **Tool** | **Purpose** |
+|----------|-------------|
+| Real-time dashboards | Track KPIs continuously |
+| Quarterly reports | Inform management and board |
+| Annual impact reports | Public transparency |
+| Feedback loops | Adapt services based on findings |

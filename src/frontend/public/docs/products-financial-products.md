@@ -2,24 +2,48 @@
 
 ## Savings Products
 
-| Product | Features | Min. Contribution | Interest |
-|---|---|---|---|
-| Ordinary Shares | Ownership stake | KES 500/month | Dividend |
-| Fixed Deposit | 3-24 month tenure | KES 10,000 | 12% p.a. |
-| Holiday Savings | Seasonal goal savings | KES 200/month | 7% p.a. |
-| Biashara Savings | Business reserve fund | KES 1,000/month | 9% p.a. |
+| **Product** | **Features** | **Target Members** |
+|-------------|--------------|---------------------|
+| **Regular Savings Account** | Low minimum balance, competitive interest, easy access | All members |
+| **Fixed Deposit Account** | Higher interest for fixed terms (6–24 months) | Members with surplus funds |
+| **Youth Savings Scheme** | No minimum balance, incentives for regular saving | Entrepreneurs under 35 |
+| **Group Savings Account** | For teams, collectives, or incubator cohorts | Startup teams, hubs |
+| **Health & Pension Savings** | Long-term savings for social security | Freelancers, gig workers |
 
-## Credit Products
+## Loan Products
 
-| Product | Max Amount | Rate | Tenure |
-|---|---|---|---|
-| Boresha Loan | 3x deposits | 12% p.a. | 48 months |
-| Haraka Loan | KES 50,000 | 8% flat | 12 months |
-| Elimu Loan | KES 100,000 | 10% p.a. | 12 months |
-| Biashara Loan | KES 500,000 | 14% p.a. | 60 months |
-| Karibu Loan | KES 5,000 | 5% flat | 3 months |
+| **Loan Type** | **Purpose** | **Features** | **Repayment Terms** |
+|---------------|-------------|--------------|---------------------|
+| **Seed Capital Loan** | Business startup, prototyping | Up to UGX 20M, mentorship included | 6–24 months, grace period available |
+| **Working Capital Loan** | Day-to-day operations | Up to UGX 10M, quick disbursement | 3–12 months, revenue-based |
+| **Equipment Leasing** | Computers, cameras, studio gear | Asset financing, low interest | 12–36 months, equipment as collateral |
+| **Innovation Loan** | Product development, R&D | Milestone-based disbursement | 12–24 months, flexible |
+| **Bridge Finance** | Short-term gap funding | Fast approval, higher interest | 1–6 months |
+| **Women in Tech Loan** | Special rates for female entrepreneurs | Lower interest, mentorship | 6–24 months |
+| **Youth Enterprise Loan** | For entrepreneurs under 35 | Reduced collateral, peer guarantee | 6–24 months |
 
-## Insurance Products
-- **Last Expense Cover**: KES 500/month, covers up to KES 100,000
-- **Loan Protection Insurance**: Bundled with all loans
-- **Medical Cover**: Group scheme, negotiated rates
+## Investment Products
+
+| **Product** | **Description** | **Returns** |
+|-------------|-----------------|-------------|
+| **Member Shares** | Equity ownership in the SACCO | Dividends based on profits |
+| **Investment Shares** | Additional capital contribution | Higher dividend rate |
+| **SACCO Development Bond** | Long-term investment for infrastructure | Fixed interest rate |
+
+## Grants and Subsidies
+
+| **Type** | **Description** | **Eligibility** |
+|----------|-----------------|------------------|
+| **Innovation Grant** | Non-repayable funding for high-potential ideas | Competitive, milestone-based |
+| **Prototype Fund** | Support for developing minimum viable products | Early-stage startups |
+| **Research Commercialization Grant** | For academic innovators | University-affiliated |
+
+## Interest Rates and Fees
+
+| **Fee Type** | **Amount** |
+|--------------|------------|
+| Membership Registration | UGX 50,000 one-time |
+| Share Capital (minimum) | UGX 100,000 |
+| Loan Processing Fee | 1–2% of loan amount |
+| Late Payment Penalty | 5% of installment |
+| Withdrawal Fee (after free limit) | UGX 2,000 |

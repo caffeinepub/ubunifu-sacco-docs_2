@@ -1,22 +1,52 @@
-# Risk Management
+# Risk Management Plan
 
-## Risk Register
+## Risk Matrix
 
-| # | Risk | Category | Likelihood | Impact | Score | Mitigation |
-|---|---|---|---|---|---|---|
-| 1 | Cybersecurity breach | Technology | Medium | High | High | Encryption, penetration testing |
-| 2 | Loan default spike | Financial | Medium | High | High | Credit scoring, diversification |
-| 3 | Regulatory changes | Compliance | Low | High | Medium | Proactive SASRA engagement |
-| 4 | Staff turnover | HR | Medium | Medium | Medium | Competitive pay, retention policy |
-| 5 | Technology failure | Technology | Low | High | Medium | Disaster recovery plan |
-| 6 | Low member uptake | Market | Medium | Medium | Medium | Aggressive marketing, incentives |
-| 7 | Partner failure | Operations | Low | Medium | Low | Multiple vendor agreements |
-| 8 | Liquidity crisis | Financial | Low | High | Medium | Liquidity buffer, credit lines |
+| **Risk** | **Category** | **Likelihood** | **Impact** | **Mitigation** | **Responsible Party** |
+|----------|--------------|----------------|------------|-----------------|----------------------|
+| Loan default by startup members | Financial | High | High | Strict credit assessments, financial literacy training, guarantor systems | Credit Committee |
+| Inadequate digital infrastructure or system failure | Technological | Medium | High | Partner with reliable IT providers, regular audits, backup/disaster recovery plan | IT Department |
+| Fraud or internal financial mismanagement | Governance | Medium | High | Internal audit systems, segregation of duties, board oversight | Board of Directors |
+| Low member recruitment or retention | Operational | Medium | Medium | Aggressive awareness campaigns, incentives for early members | Marketing Department |
+| Regulatory non-compliance | Legal/Compliance | Low | High | Regular compliance audits, continuous engagement with regulators | Legal & Compliance Officer |
+| Inability to raise initial capital | Financial/Funding | Medium | High | Attractive investment packages, showcase ROI, partner with angel investors | Fundraising Team |
+| Political interference or instability | External | Low | High | Maintain neutrality, diversify regional operations | Board of Directors |
+| Cybersecurity threats | Technological | Medium | High | Encryption, penetration tests, staff cyber hygiene training | IT Department |
+| Lack of business acumen among members | Capacity | High | Medium | Continuous capacity-building, mentorship and incubation support | Business Development Team |
+| Competition from other SACCOs | Strategic/Market | Medium | Medium | Define unique value proposition, focus on niche | Strategy Team |
+| Delays in government support | Funding/External | Medium | Medium | Diversify funding sources, establish MoUs with clear timelines | Board of Directors |
+| Resistance to digital service adoption | Technological/Change | Medium | Medium | User training on digital tools, provide hybrid services | IT Dept., Member Services |
+| Inadequate board oversight | Governance | Low | High | Board training, regular performance reviews | Governance Committee |
+| Macroeconomic shocks | External/Economic | Medium | High | Monitor market trends, adjust interest rates, build reserves | SACCO Treasury |
+| Negative public perception | Reputational | Low | High | Transparent communication, timely member engagement | Communications Dept. |
 
-## Risk Appetite
-UBUNIFU SACCO has a **low to medium risk appetite** for financial and compliance risks, and a **medium risk appetite** for strategic and operational risks.
+## Risk Governance Structure
 
-## Risk Governance
-- Risk Committee meets quarterly
-- Risk register reviewed and updated every 6 months
-- CEO reports risk status to Board at every meeting
+| **Body** | **Role** |
+|----------|----------|
+| **Board of Directors** | Overall risk oversight, approve risk appetite |
+| **Risk Management Committee** | Monitor risk profile, review mitigation plans |
+| **Internal Audit** | Independent assurance on risk controls |
+| **Management** | Implement risk policies, daily monitoring |
+| **Credit Committee** | Assess and manage credit risk |
+| **IT Security Team** | Manage technology and cybersecurity risks |
+
+## Risk Monitoring and Reporting
+
+| **Frequency** | **Reports** |
+|---------------|-------------|
+| **Daily** | System alerts, transaction monitoring |
+| **Weekly** | Cash flow, liquidity reports |
+| **Monthly** | Portfolio quality, member complaints |
+| **Quarterly** | Risk dashboard to Board |
+| **Annually** | Comprehensive risk review, external audit |
+
+## Risk Appetite Statement
+
+UBUNIFU SACCO maintains a **conservative to moderate risk appetite**, prioritizing:
+
+- Protection of member deposits
+- Sustainable growth over rapid expansion
+- Compliance with all regulations
+- Responsible lending that does not over-indebt members
+- Strong governance and transparency

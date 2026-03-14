@@ -1,8 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import MarkdownPage from "./components/MarkdownPage";
+import BudgetPage from "./pages/BudgetPage";
+import OrganogramPage from "./pages/OrganogramPage";
+import SchedulePage from "./pages/SchedulePage";
+import StrategyResultsPage from "./pages/StrategyResultsPage";
 
-const routes: Array<{ path: string; mdFile: string }> = [
+const mdRoutes: Array<{ path: string; mdFile: string }> = [
   { path: "/", mdFile: "home.md" },
   { path: "/about/company-profile", mdFile: "about-company-profile.md" },
   { path: "/about/vision-mission", mdFile: "about-vision-mission.md" },
@@ -47,7 +51,6 @@ const routes: Array<{ path: string; mdFile: string }> = [
     path: "/implementation/deliverables",
     mdFile: "implementation-deliverables.md",
   },
-  { path: "/implementation/schedule", mdFile: "implementation-schedule.md" },
   { path: "/beneficiaries", mdFile: "beneficiaries.md" },
   {
     path: "/products/financial-products",
@@ -65,12 +68,9 @@ const routes: Array<{ path: string; mdFile: string }> = [
   { path: "/products/revenue-streams", mdFile: "products-revenue-streams.md" },
   { path: "/products/key-resources", mdFile: "products-key-resources.md" },
   { path: "/products/impact-metrics", mdFile: "products-impact-metrics.md" },
-  { path: "/strategy-results", mdFile: "strategy-results.md" },
   { path: "/risk-management", mdFile: "risk-management.md" },
   { path: "/hr/staffing", mdFile: "hr-staffing.md" },
-  { path: "/hr/organogram", mdFile: "hr-organogram.md" },
   { path: "/hr/motivation-plan", mdFile: "hr-motivation-plan.md" },
-  { path: "/budget", mdFile: "budget.md" },
   { path: "/sustainability", mdFile: "sustainability.md" },
   { path: "/references", mdFile: "references.md" },
 ];
@@ -80,13 +80,17 @@ export default function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          {routes.map(({ path, mdFile }) => (
+          {mdRoutes.map(({ path, mdFile }) => (
             <Route
               key={path}
               path={path}
               element={<MarkdownPage mdFile={mdFile} />}
             />
           ))}
+          <Route path="/implementation/schedule" element={<SchedulePage />} />
+          <Route path="/strategy-results" element={<StrategyResultsPage />} />
+          <Route path="/budget" element={<BudgetPage />} />
+          <Route path="/hr/organogram" element={<OrganogramPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

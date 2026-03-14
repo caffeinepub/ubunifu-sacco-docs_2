@@ -1,33 +1,59 @@
-# Organogram
+# Organisational Structure
 
-## Organizational Structure
+## Governance Structure
 
-```
-                    Board of Directors
-                          |
-                  Supervisory Committee
-                          |
-                  Chief Executive Officer
-                 /         |          \
-               CFO         CTO      Credit Manager
-              /   \       /   \          |
-          Finance  M&E   IT   Systems  Field Officers
-          Officers      Support        (4)
-                              \
-                          Customer Service (3)
-```
+- **General Meeting of Members** — Supreme Authority
+  - **Board of Directors** — Oversight & Strategic Direction
+    - Supervisory Committee — Independent oversight
+    - Credit Committee — Loan decisions
 
-## Governance Bodies
+## Management Structure
 
-| Body | Members | Function | Frequency |
-|---|---|---|---|
-| Board of Directors | 9 | Policy, oversight | Monthly |
-| Supervisory Committee | 3 | Audit, compliance | Quarterly |
-| Management Team | 4 | Operations | Weekly |
-| Staff Meetings | All | Coordination | Monthly |
+- **CEO / SACCO Manager**
+  - Head of Finance & Accounting
+    - Finance Manager
+    - Accountants (3–5)
+    - Treasury Officer
+    - Payroll Officer
+  - Head of Technology & Innovation
+    - IT Manager
+    - Software Developers (2–3)
+    - MIS Officer
+    - Cybersecurity Specialist
+  - Head of Credit / Loans
+    - Credit Manager
+    - Loan Officers (10–15)
+    - Credit Analysts (5–8)
+    - Collections Officers (3–5)
+  - Head of Business Development & Partnerships
+    - Business Development Manager
+    - Partnership Officers (2–3)
+    - Innovation Program Coordinator
+    - Grants Specialist
+  - Head of Member Services
+    - Member Services Manager
+    - Onboarding Officers (4–6)
+    - Customer Support Representatives (5–8)
+    - Training Coordinators (2–3)
+  - Head of Operations & Compliance
+    - Operations Manager
+    - Compliance Officer
+    - Internal Auditor
+    - Risk Officer
+    - Legal Officer
+
+## Regional Branch Structure (each branch)
+
+- Branch Manager
+- Loan Officers (3–5)
+- Member Services Officers (2–3)
+- Teller/Cashier (1–2)
+- Admin Assistant
+- Security (1–2)
 
 ## Reporting Lines
-- All managers report to the CEO
-- CEO reports to the Board of Directors
-- Supervisory Committee reports directly to AGM
-- External auditors report to Supervisory Committee
+
+- All Department Heads report to the **CEO**
+- CEO reports to the **Board of Directors**
+- Board reports to the **General Meeting of Members**
+- Supervisory and Credit Committees have independent reporting lines to the Board and General Meeting
