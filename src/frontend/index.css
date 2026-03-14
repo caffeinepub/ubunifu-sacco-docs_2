@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0.99 0 0;
+    --foreground: 0.18 0.01 160;
+    --card: 0.99 0 0;
+    --card-foreground: 0.18 0.01 160;
+    --popover: 0.99 0 0;
+    --popover-foreground: 0.18 0.01 160;
+    --primary: 0.52 0.155 150;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.96 0.02 150;
+    --secondary-foreground: 0.3 0.08 150;
+    --muted: 0.96 0.008 150;
+    --muted-foreground: 0.48 0.015 150;
+    --accent: 0.93 0.04 150;
+    --accent-foreground: 0.35 0.1 150;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.91 0.015 150;
+    --input: 0.91 0.015 150;
+    --ring: 0.52 0.155 150;
+    --chart-1: 0.52 0.155 150;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0.005 150;
+    --sidebar-foreground: 0.18 0.01 160;
+    --sidebar-primary: 0.52 0.155 150;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.93 0.04 150;
+    --sidebar-accent-foreground: 0.35 0.1 150;
+    --sidebar-border: 0.91 0.015 150;
+    --sidebar-ring: 0.52 0.155 150;
+  }
+
+  * { @apply border-border; }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 { @apply font-display; }
+}
+
+.md-content { color: oklch(0.18 0.01 160); max-width: 56rem; }
+
+.md-content h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem; font-weight: 400;
+  color: oklch(0.25 0.05 150);
+  margin-top: 0; margin-bottom: 1rem;
+  border-bottom: 2px solid oklch(0.52 0.155 150);
+  padding-bottom: 0.5rem;
+}
+
+.md-content h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem; font-weight: 400;
+  color: oklch(0.3 0.08 150);
+  margin-top: 2rem; margin-bottom: 0.75rem;
+}
+
+.md-content h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: oklch(0.35 0.1 150);
+  margin-top: 1.5rem; margin-bottom: 0.5rem;
+}
+
+.md-content h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem; font-weight: 600;
+  color: oklch(0.35 0.1 150);
+  margin-top: 1.25rem; margin-bottom: 0.4rem;
+}
+
+.md-content p { margin-bottom: 1rem; line-height: 1.75; }
+
+.md-content ul, .md-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+.md-content ul { list-style: disc; }
+.md-content ol { list-style: decimal; }
+.md-content li { margin-bottom: 0.3rem; line-height: 1.65; }
+
+.md-content a { color: oklch(0.52 0.155 150); text-decoration: underline; text-underline-offset: 2px; }
+.md-content a:hover { color: oklch(0.4 0.13 150); }
+
+.md-content blockquote {
+  border-left: 4px solid oklch(0.52 0.155 150);
+  background: oklch(0.96 0.025 150);
+  padding: 0.75rem 1.25rem;
+  margin: 1.25rem 0;
+  border-radius: 0 0.375rem 0.375rem 0;
+  font-style: italic;
+  color: oklch(0.35 0.08 150);
+}
+.md-content blockquote p { margin-bottom: 0; }
+
+.md-content code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: oklch(0.93 0.015 150);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  color: oklch(0.3 0.09 150);
+}
+
+.md-content pre {
+  background: oklch(0.15 0.02 160);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+.md-content pre code {
+  background: none; padding: 0;
+  color: oklch(0.92 0.02 150);
+  font-size: 0.875rem;
+}
+
+.md-content table {
+  width: 100%; border-collapse: collapse;
+  margin-bottom: 1.5rem; font-size: 0.9rem;
+  border-radius: 0.5rem; overflow: hidden;
+  box-shadow: 0 1px 3px oklch(0 0 0 / 0.08);
+}
+.md-content thead tr { background: oklch(0.52 0.155 150); }
+.md-content thead th {
+  padding: 0.65rem 1rem; text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600; font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: oklch(0.99 0 0); border: none;
+}
+.md-content tbody tr:nth-child(even) { background: oklch(0.97 0.015 150); }
+.md-content tbody tr:nth-child(odd) { background: oklch(0.99 0 0); }
+.md-content tbody tr:hover { background: oklch(0.94 0.03 150); }
+.md-content tbody td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid oklch(0.91 0.015 150);
+  color: oklch(0.22 0.015 155);
+}
+.md-content strong { font-weight: 600; color: oklch(0.22 0.02 155); }
+.md-content hr { border: none; border-top: 1px solid oklch(0.91 0.015 150); margin: 2rem 0; }
