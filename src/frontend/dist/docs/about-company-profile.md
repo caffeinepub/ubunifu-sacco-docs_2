@@ -1,22 +1,21 @@
 # Company Profile
 
-**UBUNIFU SACCO Ltd.** (meaning "Creativity" in Swahili) is a licensed Savings and Credit Cooperative Society registered under the Co-operative Societies Act, Cap 490 of the Laws of Kenya.
+## About UBUNIFU SACCO Ltd.
 
-## Registration Details
+**UBUNIFU SACCO Ltd.** is a member-owned financial cooperative 
+dedicated to empowering Uganda's growing ecosystem of technology 
+startups, innovators, and creatives.
 
-| Field | Details |
-|---|---|
-| Legal Name | UBUNIFU SACCO Ltd. |
-| Registration Number | CS/SACCO/1234/2018 |
-| Regulator | SASRA |
-| Year Founded | 2018 |
-| Headquarters | Nairobi, Kenya |
-| Membership | Open (Common Bond) |
+### Our Story
 
-## Background
+Established in 2025, UBUNIFU SACCO emerged from the recognition 
+that Uganda's vibrant tech and creative sectors face persistent 
+barriers to accessing affordable finance and support services.
 
-UBUNIFU SACCO was established by a group of young professionals and entrepreneurs who recognized the need for an innovative, technology-driven cooperative that could serve the financial needs of the urban working population.
+### Key Differentiators
 
-## Governance
-
-The SACCO is governed by a Board of Directors elected annually at the Annual General Meeting (AGM). Day-to-day operations are managed by a professional management team led by the Chief Executive Officer.
+- **Sector-Specific Focus**: Dedicated to technology and creative sectors
+- **Tailored Financial Products**: Innovation loans, equipment leasing
+- **Integrated Support**: Combining finance with mentorship and networking
+- **Digital-First Approach**: Leveraging technology for service delivery
+- **Member-Owned Model**: Democratic governance with members as shareholders

@@ -125,9 +125,6 @@ importers:
       '@tanstack/react-router':
         specifier: ~1.131.8
         version: 1.131.50(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@types/react-router-dom':
-        specifier: ^5.3.3
-        version: 5.3.3
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
@@ -143,9 +140,6 @@ importers:
       embla-carousel-react:
         specifier: ^8.2.1
         version: 8.6.0(react@19.1.1)
-      highlight.js:
-        specifier: ^11.10.0
-        version: 11.11.1
       input-otp:
         specifier: ^1.4.1
         version: 1.4.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -174,8 +168,8 @@ importers:
         specifier: ^5.4.0
         version: 5.5.0(react@19.1.1)
       react-markdown:
-        specifier: ^9.0.1
-        version: 9.1.0(@types/react@19.1.17)(react@19.1.1)
+        specifier: ^10.1.0
+        version: 10.1.0(@types/react@19.1.17)(react@19.1.1)
       react-quill-new:
         specifier: 3.4.6
         version: 3.4.6(quill-delta@5.1.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -195,7 +189,7 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
       remark-gfm:
-        specifier: ^4.0.0
+        specifier: ^4.0.1
         version: 4.0.1
       sonner:
         specifier: ^1.7.4
@@ -231,6 +225,9 @@ importers:
       '@types/react-dom':
         specifier: ~19.1.0
         version: 19.1.11(@types/react@19.1.17)
+      '@types/react-router-dom':
+        specifier: ^5.3.3
+        version: 5.3.3
       '@types/three':
         specifier: 0.176.0
         version: 0.176.0
@@ -2776,8 +2773,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-markdown@9.1.0:
-    resolution: {integrity: sha512-xaijuJB0kzGiUdG7nc2MOMDUDBWPyGAjZtUrow9XxUeua8IqeP+VlIfAZ3bphpcLTnSZXz6z9jcVC/TCwbfgdw==}
+  react-markdown@10.1.0:
+    resolution: {integrity: sha512-qKxVopLT/TyA6BX3Ue5NwabOsAzm0Q7kAPwq6L+wWDwisYs7R8vZ0nRXqq6rkueboxpkjvLGU9fWifiX/ZZFxQ==}
     peerDependencies:
       '@types/react': '>=18'
       react: '>=18'
@@ -5915,7 +5912,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-markdown@9.1.0(@types/react@19.1.17)(react@19.1.1):
+  react-markdown@10.1.0(@types/react@19.1.17)(react@19.1.1):
     dependencies:
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
